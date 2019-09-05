@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+                     entityID="https://stg-saml.pass.lmns/FIM/sps/IdpPassIDPFed/saml20">
+    <md:IDPSSODescriptor WantAuthnRequestsSigned="true"
+                         protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:KeyDescriptor use="signing">
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+                    <X509Certificate>
+                        MIIG3jCCBMagAwIBAgIMcHmE5AAAAABXySOZMA0GCSqGSIb3DQEBCwUAMGgxCzAJBgNVBAYTAlNHMRgwFgYDVQQKEw9OZXRydXN0IFB0ZSBMdGQxJjAkBgNVBAsTHU5ldHJ1c3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5MRcwFQYDVQQDEw5OZXRydXN0IENBIDItMTAeFw0xNzA5MTEwNTQ5NTVaFw0yMTAyMTIxNjAwMDBaMIG9MQswCQYDVQQGEwJTRzEYMBYGA1UEChMPTmV0cnVz
+                    </X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </md:KeyDescriptor>
+        <md:KeyDescriptor use="encryption">
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+                    <X509Certificate>
+                        MIIGsTCCBJmgAwIBAgIMx4BBEsMSVRoZSBwcml2YXRlIGtleSBjb3JyZXNwb25kaW5nIHRvIHRoaXMgY2VydGlmaWNhdGUgbWF5IGhhdmUgYmVlbiBleHBvcnRlZC4wQwYIKwYBBQUHAQEENzA1MDMGCCsGAQUFBzAChidodHRwOi8vYWlhLm5ldHJ1c3QubmV0L25ldHJ1c3RjYTItMS5jZXIwgbsGA1UdHwSBszCBsDAtoCugKYYnaHR0cDovL2NybC5uZXRydXN0Lm5ldC9uZXRydXN0Y2EyLTEuY3JsMH+gfaB7pHkwdzELMAkGA1UEBhMCU0cxGDAWBgNVBAoTD05ldHJ1c3QgUHRlIEx0ZDEmMCQGA1UECxMdTmV0cnVzdCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkxFzAVBgNVBAMTDk5ldHJ1c3QgQ0EgMi0xMQ0wCwYDVQQDEwRDUkwxMB8GA1UdIwQYMBaAFBdLJkuUeQpf35rxCDfDSDeDu9f6MB0GA1UdDgQWBBQL+o/vJiQOATTFN13hgpmDupRvMzAJBgNVHRMEAjAAMA0G
+                    </X509Certificate>
+                </X509Data>
+            </KeyInfo>
+            <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5"/>
+        </md:KeyDescriptor>
+        <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                                      Location="https://stg-saml.pass.lmns/FIM/sps/IdpPassIDPFed/saml20/soap"
+                                      index="0" isDefault="true"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact"
+                                Location="https://stg-saml.pass.lmns/FIM/sps/IdpPassIDPFed/saml20/slo"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                                Location="https://stg-saml.pass.lmns/FIM/sps/IdpPassIDPFed/saml20/slo"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                                Location="https://stg-saml.pass.lmns/FIM/sps/IdpPassIDPFed/saml20/soap"/>
+        <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact"
+                                Location="https://stg-saml.pass.lmns/FIM/sps/IdpPassIDPFed/saml20/mnids"/>
+        <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                                Location="https://stg-saml.pass.lmns/FIM/sps/IdpPassIDPFed/saml20/mnids"/>
+        <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                                Location="https://stg-saml.pass.lmns/FIM/sps/IdpPassIDPFed/saml20/soap"/>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:encrypted</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact"
+                                Location="https://stg-saml.pass.lmns/FIM/sps/IdpPassIDPFed/saml20/login"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                                Location="https://stg-saml.pass.lmns/FIM/sps/IdpPassIDPFed/saml20/login"/>
+    </md:IDPSSODescriptor>
+    <md:Organization>
+        <md:OrganizationName xml:lang="en">IdpPass</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="en">IdpPass</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="en"/>
+    </md:Organization>
+    <md:ContactPerson contactType="technical">
+        <md:Company>IdpPass</md:Company>
+        <md:GivenName/>
+        <md:SurName/>
+        <md:EmailAddress/>
+        <md:TelephoneNumber/>
+    </md:ContactPerson>
+</md:EntityDescriptor>

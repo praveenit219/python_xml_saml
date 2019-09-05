@@ -1,0 +1,9 @@
+<References>
+    <Book xml:id="testXml123">
+        <Author>
+            <FirstName>Bruce</FirstName>
+            <LastName>Schneier</LastName>
+        </Author>
+        <Title>Applied Cryptography</Title>
+    </Book>
+</References>

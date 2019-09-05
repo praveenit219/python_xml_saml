@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://stg-saml.pass.lmns/FIM/sps/IDPFed/saml20">
+<md:IDPSSODescriptor WantAuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:KeyDescriptor use="signing">
+<KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+<X509Data>
+<X509Certificate>MIIG6DCCBNCgAwIBAgIMDkE+AwAAAABXyXbnMA0GCSqGSIb3DQEBCwUAMGgxCzAJBgNVBAYTAlNHMRgwFgYDVQQKEw9OZXRydXN0IFB0ZSBMdGQxJjAkBgNVBAsTHU5ldHJ1c3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5M</X509Certificate>
+</X509Data>
+</KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+<KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+<X509Data>
+<X509Certificate>MIIGvDCCBKSgAwIBAgINAJbThZ8AAAAAV8l26DANBgkqhkiG9w0BAQsFADBoMQswCQYDVQQGEwJTRzEYMBYGA1UEChMPTmV0cnVzdCBQdGUgTHRkMSYwJAYDVQQLEx1OZXRydXN0IENlcnRpZmljYXRlIEF1dGhvcml0eTEXMBUGA1UEAxMOTmV0cnVzdCBDQSAyLTEwHhcNMTgxMTIxMDI1NDI1WhcNMjIwMTIyMTQwMTU4WjCBxzELMAkGA1UEBhMCU0cxGDAWBgNVBAoTD05ldHJ1c3QgUHRlIEx0ZDEmMCQGA1UECxMdTmV0cnVzdCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkxIDAeBgNVBAsTF05ldHJ1c3QgQ0EgMi0xIChTZXJ2ZXIpMSUwIwYDVQQLExxHb3Zlcm5tZW50IFRlY2hub2xvZ3kgQWdlbmN5MREwDwYDVQQLEwhDb3JwUGFzczEaMBgGA1UEAxMRc3RnLXN</X509Certificate>
+</X509Data>
+</KeyInfo>
+<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5"/>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://stg-saml.pass.lmns/FIM/sps/IDPFed/saml20/soap" index="0" isDefault="true"/>
+<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://stg-saml.pass.lmns/FIM/sps/IDPFed/saml20"/>
+<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stg-saml.pass.lmns/FIM/sps/IDPFed/saml20"/>
+<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://stg-saml.pass.lmns/FIM/sps/IDPFed/saml20/soap"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:encrypted</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://stg-saml.pass.lmns/FIM/sps/IDPFed/saml20/login"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stg-saml.pass.lmns/FIM/sps/IDPFed/saml20/login"/>
+</md:IDPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="en">IDPFed</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="en">IDPFed</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="en"/>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:Company>IDPFed</md:Company>
+<md:GivenName/>
+<md:SurName/>
+<md:EmailAddress/>
+<md:TelephoneNumber/>
+</md:ContactPerson>
+</md:EntityDescriptor>
